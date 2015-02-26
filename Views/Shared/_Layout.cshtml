@@ -6,7 +6,55 @@
     <title></title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .price-details {
+            margin-top: 10px;
+            border-top: 1px solid #d9230f;
+        }
 
+        .price-number {
+            float: left;
+            padding-top: 0px;
+        }
+
+        .price-details p span.rupees {
+            font-size: 1.6em;
+            font-family: 'ambleregular';
+            color: #383838;
+        }
+
+        .add-cart {
+            float: right;
+            display: inline-block;
+        }
+
+            .add-cart h4 a {
+                font-size: 0.9em;
+                display: block;
+                padding: 8px 15px;
+                font-family: 'ambleregular';
+                background: #d9230f;
+                color: #FFF;
+                text-decoration: none;
+                outline: 0;
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                -o-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+                margin-top: -10px;
+            }
+
+                .add-cart h4 a:hover {
+                    text-shadow: 0px 0px 1px #000;
+                    background: #d9230f;
+                }
+
+        .section {
+            clear: both;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
 </head>
 <body>
 
@@ -67,7 +115,7 @@
                             <th>Brand</th>
                         </tr>
                     </thead>
-                    <tbody id = "bd"></tbody>
+                    <tbody id="bd"></tbody>
 
                 </table>
             </div>
@@ -96,26 +144,26 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            
+
             $(".search").hide();
             var p1, p2;
             $('a#link1').click(function () {
                 $(".hid").remove();
-                
+
                 $(".search").show();
                 //$("tbody").removeData();
                 $("#tbl tr").remove();
                 p1 = 4000;
                 p2 = 20000;
-                $.getJSON("/Brand/getByPrice?p1=4000&p2=20000" , function (data) {
+                $.getJSON("/Brand/getByPrice?p1=4000&p2=20000", function (data) {
                     for (i = 0; i < data.length; i++) {
 
                         $('#tbl tbody').append("<tr><td><li style=text-decoration:none;list-style-type:none><a href=\"/Brand/Specifications?mod=" + data[i].Model + "\">" + data[i].Model + "</a></li></td><td>" + data[i].Price + "</td><td>" + data[i].pId + "</td></tr>");
                     }
 
                 });
-                
-               
+
+
             });
 
 

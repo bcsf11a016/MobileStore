@@ -69,46 +69,48 @@
 
 </div>
 
-<div class="content">
-    <div class="content_top">
-        <div class="heading">
-            <h3>QMobiles</h3>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    @foreach (var x in Model)
-    {
-        <div class="col-sm-6 col-xs-6 col-md-3">
-            <div class="thumbnail">
-                <a href="/Brand/Specifications?mod=@x.Model">
-                    <img src="@x.Image" alt="" />
-                </a>
-
-                <h4 style="text-align:center">
-                    QMobile
-                    <br />
-                    @x.Model
-                </h4>
-                <div class="price-details">
-                    <div class="price-number">
-                        <p><span class="rupees">Rs. @x.Price</span></p>
-                    </div>
-                    <div class="add-cart">
-                        @if (@Session["user"] != null)
-                        {
-                            <h4><a href="/Cart/AddToCart?mod=@x.Model">Add to Cart</a></h4>
-
-                        }
-                        else
-                        {
-                            <h4><a href="/Account/Login">Add to Cart</a></h4>
-                        }
-                    </div>
-                    <div class="clear"></div>
-                </div>
+<div class="hid">
+    <div class="content">
+        <div class="content_top">
+            <div class="heading">
+                <h3>QMobiles</h3>
             </div>
         </div>
-    }
+    </div>
+
+    <div class="row">
+        @foreach (var x in Model)
+        {
+            <div class="col-sm-6 col-xs-6 col-md-3">
+                <div class="thumbnail">
+                    <a href="/Brand/Specifications?mod=@x.Model">
+                        <img src="@x.Image" alt="" />
+                    </a>
+
+                    <h4 style="text-align:center">
+                        QMobile
+                        <br />
+                        @x.Model
+                    </h4>
+                    <div class="price-details">
+                        <div class="price-number">
+                            <p><span class="rupees">Rs. @x.Price</span></p>
+                        </div>
+                        <div class="add-cart">
+                            @if (@Session["user"] != null)
+                            {
+                                <h4><a href="/Cart/AddToCart?mod=@x.Model">Add to Cart</a></h4>
+
+                            }
+                            else
+                            {
+                                <h4><a href="/Account/Login">Add to Cart</a></h4>
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>

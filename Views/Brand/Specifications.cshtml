@@ -84,74 +84,75 @@
         </div>
     </div>
 </div>
-<div class="row" style="margin-top:30px">
-    <div class="col-sm-2 col-xs-2 col-md-1">
-        <img src="@ViewBag.product.Image" />
-    </div>
-    <div class="col-sm-10 col-xs-10 col-md-11 ">
-        <h4 style="text-align:left">
-            @ViewBag.product.pId
-            <br /><br />
-            @ViewBag.product.Model
-            <br /><br />
-            Rs. @ViewBag.product.Price
-        </h4>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-8">
-        <table class="table table-bordered" style="margin-top:20px">
-            <tbody>
-                <tr>
-                    <th>Display</th>
-                    <td>@ViewBag.specs.resolution</td>
-                </tr>
-                <tr>
-                    <th>Camera</th>
-                    <td>@ViewBag.specs.camera</td>
-                </tr>
-                <tr>
-                    <th>RAM</th>
-                    <td>@ViewBag.specs.ram</td>
-                </tr>
-                <tr>
-                    <th>ROM</th>
-                    <td>@ViewBag.specs.rom</td>
-                </tr>
-                <tr>
-                    <th>Processor</th>
-                    <td>@ViewBag.specs.cpu</td>
-                </tr>
-                <tr>
-                    <th>OS</th>
-                    <td>@ViewBag.specs.os</td>
-                </tr>
-                <tr>
-                    <th>Wifi</th>
-                    <td>@ViewBag.specs.wifi</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-8">
-        <div class="btn btn-danger">
-            @if (@Session["user"] != null)
-            {
-                <a href="/Cart/AddToCart?mod=@ViewBag.product.Model" style="color:white;text-decoration: none">Add to Cart</a>
-                
-            }
-            else
-            {
-                <a href="/Account/Login" style="color:white;text-decoration: none">Add to Cart</a>
-            }
+<div class="hid">
+    <div class="row" style="margin-top:30px">
+        <div class="col-sm-2 col-xs-2 col-md-1">
+            <img src="@ViewBag.product.Image" />
         </div>
-        <div class="btn btn-default">
-            <a href="/Home/Index" style="color:white;text-decoration: none">Continue Shopping</a>
+        <div class="col-sm-10 col-xs-10 col-md-11 ">
+            <h4 style="text-align:left">
+                @ViewBag.product.pId
+                <br /><br />
+                @ViewBag.product.Model
+                <br /><br />
+                Rs. @ViewBag.product.Price
+            </h4>
         </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-bordered" style="margin-top:20px">
+                <tbody>
+                    <tr>
+                        <th>Display</th>
+                        <td>@ViewBag.specs.resolution</td>
+                    </tr>
+                    <tr>
+                        <th>Camera</th>
+                        <td>@ViewBag.specs.camera</td>
+                    </tr>
+                    <tr>
+                        <th>RAM</th>
+                        <td>@ViewBag.specs.ram</td>
+                    </tr>
+                    <tr>
+                        <th>ROM</th>
+                        <td>@ViewBag.specs.rom</td>
+                    </tr>
+                    <tr>
+                        <th>Processor</th>
+                        <td>@ViewBag.specs.cpu</td>
+                    </tr>
+                    <tr>
+                        <th>OS</th>
+                        <td>@ViewBag.specs.os</td>
+                    </tr>
+                    <tr>
+                        <th>Wifi</th>
+                        <td>@ViewBag.specs.wifi</td>
+                    </tr>
+                </tbody>
 
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="btn btn-danger">
+                @if (@Session["user"] != null)
+                {
+                    <a href="/Cart/AddToCart?mod=@ViewBag.product.Model" style="color:white;text-decoration: none">Add to Cart</a>
+
+                }
+                else
+                {
+                    <a href="/Account/Login" style="color:white;text-decoration: none">Add to Cart</a>
+                }
+            </div>
+            <div class="btn btn-default">
+                <a href="/Home/Index" style="color:white;text-decoration: none">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
 

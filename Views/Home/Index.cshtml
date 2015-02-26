@@ -4,7 +4,59 @@
 }
 
 <script src="~/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+@section css
+{
+<style>
+    .price-details {
+        margin-top: 10px;
+        border-top: 1px solid #d9230f;
+    }
 
+    .price-number {
+        float: left;
+        padding-top: 0px;
+    }
+
+    .price-details p span.rupees {
+        font-size: 1.6em;
+        font-family: 'ambleregular';
+        color: #383838;
+    }
+
+    .add-cart {
+        float: right;
+        display: inline-block;
+    }
+
+        .add-cart h4 a {
+            font-size: 0.9em;
+            display: block;
+            padding: 8px 15px;
+            font-family: 'ambleregular';
+            background: #d9230f;
+            color: #FFF;
+            text-decoration: none;
+            outline: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            margin-top: -10px;
+        }
+
+            .add-cart h4 a:hover {
+                text-shadow: 0px 0px 1px #000;
+                background: #d9230f;
+            }
+
+    .section {
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+    }
+</style>
+
+}
 <div class="bod">
     <div class="row" style="margin-bottom:70px">
         <div class="col-md-4 hidden-sm hidden-xs">

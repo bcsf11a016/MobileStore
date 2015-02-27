@@ -297,10 +297,10 @@ textarea {
 }
 #thumb{
     background:#FFFFFF;
-    height:225px;
+    height:235px;
     margin-bottom:20px;
     border-radius:4px;
-    border-width:thick;
+    border-width:thin;
 }
 #thumb img{
     margin-top:15px;

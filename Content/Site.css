@@ -295,6 +295,10 @@ textarea {
 	font-family: 'ambleregular';
 	color:#CC3636;
 }
+#thumb{
+    background:#FFFFFF;
+    height:100px;
+}
 .price-details{
 	margin-top:10px;
 	border-top:1px solid #d9230f;

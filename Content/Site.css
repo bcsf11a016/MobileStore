@@ -300,6 +300,9 @@ textarea {
     height:220px;
     margin-bottom:20px;
 }
+#thumb img{
+    margin-top:20px;
+}
 .price-details{
 	margin-top:10px;
 	border-top:1px solid #d9230f;
@@ -320,7 +323,7 @@ textarea {
 .add-cart h4 a{
 	font-size:0.9em;
 	display: block;
-	padding:8px 15px;
+	padding:6px 12px;
 	font-family: 'ambleregular';
 	background:#d9230f;
 	color: #FFF;
